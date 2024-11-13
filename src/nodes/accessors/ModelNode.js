@@ -37,7 +37,7 @@ export const modelWorldMatrix = /*@__PURE__*/ nodeImmutable( ModelNode, ModelNod
 export const modelPosition = /*@__PURE__*/ nodeImmutable( ModelNode, ModelNode.POSITION );
 export const modelScale = /*@__PURE__*/ nodeImmutable( ModelNode, ModelNode.SCALE );
 export const modelViewPosition = /*@__PURE__*/ nodeImmutable( ModelNode, ModelNode.VIEW_POSITION );
-export const modelNormalMatrix = /*@__PURE__*/ uniform( new Matrix3() ).onObjectUpdate( ( { object }, self ) => self.value.getNormalMatrix( object.matrixWorld ) );
+export const modelNormalMatrix = /*@__PURE__*/ uniform( new Matrix3() ).label('modelNormalMatrix').onObjectUpdate( ( { object }, self ) => self.value.getNormalMatrix( object.matrixWorld ) );
 export const modelWorldMatrixInverse = /*@__PURE__*/ uniform( new Matrix4() ).onObjectUpdate( ( { object }, self ) => self.value.copy( object.matrixWorld ).invert() );
 export const modelViewMatrix = /*@__PURE__*/ cameraViewMatrix.mul( modelWorldMatrix ).toVar( 'modelViewMatrix' );
 

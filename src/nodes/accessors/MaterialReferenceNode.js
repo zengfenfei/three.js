@@ -20,6 +20,7 @@ class MaterialReferenceNode extends ReferenceNode {
 		//this.updateType = NodeUpdateType.RENDER;
 
 		this.isMaterialReferenceNode = true;
+		this.name = 'material_' + this.properties.join( '_' );
 
 	}
 

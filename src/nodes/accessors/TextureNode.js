@@ -107,7 +107,7 @@ class TextureNode extends UniformNode {
 
 	getTransformedUV( uvNode ) {
 
-		if ( this._matrixUniform === null ) this._matrixUniform = uniform( this.value.matrix );
+		if ( this._matrixUniform === null ) this._matrixUniform = uniform( this.value.matrix ).label( 'uvTransform' + this.id );
 
 		return this._matrixUniform.mul( vec3( uvNode, 1 ) ).xy;
 

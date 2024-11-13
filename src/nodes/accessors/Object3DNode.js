@@ -22,7 +22,7 @@ class Object3DNode extends Node {
 
 		this.updateType = NodeUpdateType.OBJECT;
 
-		this._uniformNode = new UniformNode( null );
+		this._uniformNode = new UniformNode( null ).label( scope );
 
 	}
 
